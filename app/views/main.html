@@ -1,13 +1,13 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a data-ng-href="#">Home</a></li>
-    <li><a data-ng-href="#">About</a></li>
-    <li><a data-ng-href="#">Contact</a></li>
+   <!--  <li><a data-ng-href="#">About</a></li>
+    <li><a data-ng-href="#">Contact</a></li> -->
     <!-- Checks the status of your connection -->
     <!-- #TODO: insert an online/offline icon -->
     <li data-ng-switch="connection">
-    	<a data-ng-switch-when="false" ng-href="refresh">Offline</a>
-    	<a data-ng-switch-when="true" ng-href="#">Online</a>
+    	<a data-ng-switch-when="false" data-ng-href="refreshLines()">Offline</a>
+    	<a data-ng-switch-when="true">Online</a>
     </li>
     <!-- #TODO: insert a refresh icon here -->
      <li><a data-ng-click="refreshLines()">Refresh</a></li> 
@@ -16,10 +16,11 @@
 </div>
 <section>
 	<span>Last updated: {{ timeStamp | date:'MMM dd yyyy h:mm:ss a' }}</span>
-	<ul>
+	<ul class="tfl-lines">
     <!-- #TODO: insert classNames and style -->
-		<li data-ng-repeat="line in lineStatus">
-			<span data-ng-repeat="info in line.Line">{{ info.Name }}</span> 
+		<li data-ng-repeat="line in lineStatus" class="line">
+<!--     {{ line.Line.attributes.Name }} -->
+			<span data-ng-repeat="info in line.Line" class="{{ info.Name }}">{{ info.Name }}</span> 
       <span data-ng-repeat="info in line.Status" class="{{ info.Description }}"></span>
       <div>
         <span data-ng-repeat="info in line.Status">{{ info.Description }}</span>

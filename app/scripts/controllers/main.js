@@ -9,6 +9,8 @@ angular.module('ngTflApp')
 	    	$scope.connection = TFLStatus.onLine();
 	    	$scope.lineStatus = data;
 	    	$scope.timeStamp = timeStamp;
+
+	    	console.log(data);
 	    });
 	}
 

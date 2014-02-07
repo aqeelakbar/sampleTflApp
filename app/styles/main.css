@@ -1,15 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot');
-  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.woff') format('woff'),
-    url('../fonts/icomoon.ttf') format('truetype'),
-    url('../fonts/icomoon.svg#icomoon') format('svg');
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
-
-.Good, .Minor, .Suspended {
+  font-style: normal; }
+.Good, .Minor, .Severe.Delays {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -17,85 +12,111 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 .Good:before {
-  content: "\e600";
-}
-.Suspended:before {
-  content: "\e601";
-}
-.Minor:before {
-  content: "\e602";
-}
+  content: "\e600"; }
 
+.Severe.Delays:before {
+  content: "\e601"; }
+
+.Minor:before {
+  content: "\e602"; }
 
 /* Space out content a bit */
 body {
   padding-top: 20px;
-  padding-bottom: 20px;
-}
+  padding-bottom: 20px; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
   padding-left: 15px;
-  padding-right: 15px;
-}
+  padding-right: 15px; }
 
 /* Custom page header */
-
-
 .header {
-  border-bottom: 1px solid #e5e5e5;
-}
+  border-bottom: 1px solid #e5e5e5; }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
-}
+  padding-bottom: 19px; }
+
+/*content */
+.tfl-lines {
+  margin: 0;
+  padding: 0; }
+  .tfl-lines .line {
+    border: 1px solid #666666;
+    border-radius: 5px;
+    list-style: none;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    width: 100%; }
+  .tfl-lines span:first-child {
+    display: inline-block;
+    width: 100%; }
+  .tfl-lines .Bakerloo {
+    background-color: #ae6118; }
+  .tfl-lines .Central {
+    background-color: #e41f1f; }
+  .tfl-lines .Circle {
+    background-color: #f8d42d; }
+  .tfl-lines .District {
+    background-color: #007229; }
+  .tfl-lines .Hammersmith {
+    background-color: #e899a8; }
+  .tfl-lines .Jubilee {
+    background-color: #686e72; }
+  .tfl-lines .Metropolitan {
+    background-color: #893267; }
+  .tfl-lines .Northern {
+    background-color: #000000; }
+  .tfl-lines .Piccadilly {
+    background-color: #0450a1; }
+  .tfl-lines .Victoria {
+    background-color: #009fe0; }
+  .tfl-lines .Waterloo {
+    background-color: #70c3ce; }
+  .tfl-lines .Overground {
+    background-color: #f86; }
+  .tfl-lines .DLR {
+    background-color: #009fe0; }
 
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+  border-top: 1px solid #e5e5e5; }
 
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
-  }
-}
+    max-width: 730px; } }
 .container-narrow > hr {
-  margin: 30px 0;
-}
+  margin: 30px 0; }
 
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
+  border-bottom: 1px solid #e5e5e5; }
+
 .jumbotron .btn {
   font-size: 21px;
-  padding: 14px 24px;
-}
+  padding: 14px 24px; }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
-}
+  margin: 40px 0; }
+
 .marketing p + h4 {
-  margin-top: 28px;
-}
+  margin-top: 28px; }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -104,14 +125,12 @@ body {
   .marketing,
   .footer {
     padding-left: 0;
-    padding-right: 0;
-  }
+    padding-right: 0; }
+
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
-  }
+    margin-bottom: 30px; }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
-    border-bottom: 0;
-  }
-}
+    border-bottom: 0; } }
