@@ -1,0 +1,62 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+    <li data-ng-switch="connection">
+    	<a data-ng-switch-when="Offline" ng-href="refresh">Offline</a>
+    	<a data-ng-switch-when="Online" ng-href="#">Online</a>
+    </li>
+  </ul>
+  <h3 class="text-muted">TFL Status</h3>
+</div>
+<section>
+	<span>Last updated: {{ timeStamp | date:'MMM dd yyyy h:mm:ss a' }}</span>
+	<ul>
+		<li data-ng-repeat="line in lineStatus">
+			<span data-ng-repeat="info in line.Line">{{ info.Name }}</span> 
+      <span data-ng-repeat="info in line.Status" class="{{ info.Description }}"></span>
+      <div>
+        <span data-ng-repeat="info in line.Status">{{ info.Description }}</span>
+        <span data-ng-if="line.BranchDisruptions.BranchDisruption">
+          <span data-ng-repeat="info in line.BranchDisruptions.BranchDisruption.Bound">
+            {{ info.Name }}
+          </span>
+          <span data-ng-repeat="info in line.BranchDisruptions.BranchDisruption.StationFrom">
+            from {{ info.Name }} 
+          </span>
+          <span data-ng-repeat="info in line.BranchDisruptions.BranchDisruption.StationTo">
+            to {{ info.Name }}
+          </span>
+        </span>
+      </div>
+		</li>
+	</ul>
+</section>
+<!-- <div class="jumbotron"> -->
+ <!--  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+</div>
+
+<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
+
+<div class="footer">
+  <p>♥ from schizdazzle</p>
+</div>
